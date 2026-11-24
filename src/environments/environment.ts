@@ -1,11 +1,12 @@
+import { supabaseConfig } from './supabase.config';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
   production: false,
-  supabaseUrl: 'https://ijdpzasoierrsmseljfw.supabase.co',
-  supabaseAnonKey: 'sb_publishable_CLO2Hdo-4vLtGhFETLDGtA_RSqLVgXo',
+  ...supabaseConfig,
 };
 
 /*
