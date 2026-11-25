@@ -1,76 +1,36 @@
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
-
-*~
-*.sw[mnpcod]
-.tmp
-*.tmp
-*.tmp.*
-UserInterfaceState.xcuserstate
-$RECYCLE.BIN/
-
-*.log
-log.txt
-
-
-/.sourcemaps
-/.versions
-/coverage
-
-# Ionic
-/.ionic
-/www
-/platforms
-/plugins
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-project
-*.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-
-# Miscellaneous
-/.angular
-/.angular/cache
+# Dependencias y compilados
+node_modules/
+.angular/
+www/
+dist/
 .sass-cache/
-/.nx
-/.nx/cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
 
-# System files
+# Android (compilados; el código nativo en android/ sí se sube)
+android/.gradle/
+android/build/
+android/app/build/
+android/app/release/
+android/local.properties
+android/capacitor-cordova-android-plugins/
+*.apk
+*.aab
+*.iml
+
+# Secretos y configuración local (NUNCA subir)
+.env
+.env.*
+.supabase/
+supabase/.temp/
+supabase/.branches/
+
+# Herramientas y editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
 .DS_Store
-Thumbs.db
+*.log
 
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# Generados
+.ionic/
+test-results/
+playwright-report/
