@@ -110,3 +110,19 @@ Set-Location android
 La salida esperada es `android/app/build/outputs/apk/debug/app-debug.apk`, relativa a la raíz del proyecto. El APK debug se instala para pruebas.
 
 Para compilar desde Android Studio 2025.2.1 o posterior, ejecuta primero los dos comandos de Ionic y Capacitor desde la raíz. Abre la carpeta `android` como proyecto. En **Tools → SDK Manager**, instala **Android API 36** y **Android SDK Build-Tools**. En **Settings → Build, Execution, Deployment → Build Tools → Gradle**, selecciona JDK 21. Sincroniza Gradle, selecciona la variante `debug` del módulo `app` y usa **Build → Generate Bundle(s) / APK(s) → Generate APK(s)**. También puedes ejecutar `:app:assembleDebug` desde la ventana de Gradle. [Requisitos de Capacitor](https://capacitorjs.com/docs/getting-started/environment-setup) · [Menú de compilación de Android Studio](https://developer.android.com/build/build-for-release)
+
+
+## Credenciales de Prueba
+
+```PROVINCIAL
+1710034065
+Ecuador2026*
+```
+```RECINTO
+1729212405
+Ecuador2026*
+```
+```VEEDOR
+0215634874
+Ecuador2026*
+```
