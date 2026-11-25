@@ -110,7 +110,9 @@ La decisión se verificará mediante los siguientes criterios:
 - **Integrante 2:** Josue Patiño.
 - **Integrante 3:** Mario Endara.
 
-**Objeciones o desacuerdos:** Todos de acuerdo.
+**Url video:**
+
+**Objeciones o desacuerdos:** https://www.youtube.com/watch?v=yp1nX2SUQw4.
 
 **Acuerdo final:** Ionic + Angular.
 
