@@ -67,13 +67,22 @@ Despliega desde el repositorio para incluir `supabase/functions/_shared/`. Confi
 
 ### Cuentas de demostración
 
-El repositorio incluye datos electorales de ejemplo. Las cuentas de Auth se crean en tu instancia:
+**Provincial**
+```PROVINCIAL
+1710034065
+Ecuador2026*
+```
+**Recinto**
+```RECINTO
+1729212405
+Ecuador2026*
+```
+**Veedor**
+```VEEDOR
+0215634874
+Ecuador2026*
+```
 
-1. En **Authentication → Users**, crea y confirma una cuenta provincial de prueba con un correo que controles y una contraseña que elijas. Copia el UUID que le asigna Auth.
-2. En `public.perfiles`, inserta una fila con ese UUID en `id`, el mismo correo, cédula, nombres, apellidos y teléfono de prueba, `rol = 'provincial'`, `recinto_id = null` y `debe_cambiar_clave = true`.
-3. Entra como provincial y crea un coordinador de recinto. Confirma su correo, inicia sesión como ese coordinador y crea un veedor. Confirma también su correo y asígnalo a una mesa. Las altas hechas en la app usan la contraseña inicial de demostración `Ecuador2026`, que se cambia al entrar.
-
-La prueba automatizada de acceso usa `1712345675`, `coord@example.test` y `clave-de-prueba` con respuestas simuladas. Esos valores por sí solos no permiten iniciar sesión contra Supabase.
 
 ## Arquitectura y modelo de datos
 
@@ -112,17 +121,3 @@ La salida esperada es `android/app/build/outputs/apk/debug/app-debug.apk`, relat
 Para compilar desde Android Studio 2025.2.1 o posterior, ejecuta primero los dos comandos de Ionic y Capacitor desde la raíz. Abre la carpeta `android` como proyecto. En **Tools → SDK Manager**, instala **Android API 36** y **Android SDK Build-Tools**. En **Settings → Build, Execution, Deployment → Build Tools → Gradle**, selecciona JDK 21. Sincroniza Gradle, selecciona la variante `debug` del módulo `app` y usa **Build → Generate Bundle(s) / APK(s) → Generate APK(s)**. También puedes ejecutar `:app:assembleDebug` desde la ventana de Gradle. [Requisitos de Capacitor](https://capacitorjs.com/docs/getting-started/environment-setup) · [Menú de compilación de Android Studio](https://developer.android.com/build/build-for-release)
 
 
-## Credenciales de Prueba
-
-```PROVINCIAL
-1710034065
-Ecuador2026*
-```
-```RECINTO
-1729212405
-Ecuador2026*
-```
-```VEEDOR
-0215634874
-Ecuador2026*
-```
