@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 116" fill="none">
+  <title>Control Electoral</title>
+  <rect x="8" y="6" width="116" height="104" rx="24" fill="#FAF6EE"/>
+  <path d="M20 79 94 18m-64 82 78-67M20 54l45-36" stroke="#E6DDCC" stroke-width="1.4"/>
+  <circle cx="102" cy="25" r="4" fill="#E8B870"/>
+  <path d="M53 52V24a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v28" fill="#FAF6EE" stroke="#15564E" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m60 34 5 5 9-10" stroke="#15564E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 53h59l7 11v5H30v-5l7-11Z" fill="#E8B870" stroke="#15564E" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M35 69h63v25H35z" fill="#DCECE6" stroke="#15564E" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M56 60h22m-20 21h18" stroke="#15564E" stroke-width="3" stroke-linecap="round"/>
+  <text x="148" y="52" fill="#FFFDF9" font-family="system-ui, sans-serif" font-size="35" font-weight="750" letter-spacing="-1.4">
+    Control<tspan x="148" dy="35">Electoral</tspan>
+  </text>
+</svg>

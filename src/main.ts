@@ -1,20 +1,27 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { Capacitor } from '@capacitor/core';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { addIcons } from 'ionicons';
 import {
-  RouteReuseStrategy,
-  provideRouter,
-  withComponentInputBinding,
-  withPreloading,
-  PreloadAllModules,
-} from '@angular/router';
-import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular';
+  addCircleOutline, alertCircleOutline, archiveOutline, arrowBackOutline, arrowForwardOutline, barChartOutline, businessOutline,
+  checkmarkCircleOutline, clipboardOutline, documentTextOutline, imageOutline, layersOutline, locationOutline,
+  logOutOutline, personAddOutline, personOutline, refreshOutline, timeOutline,
+} from 'ionicons/icons';
 
 import { AppComponent } from './app/app.component';
-import { routes } from './app/app.routes';
+import { appConfig } from './app/app.config';
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
-    provideRouter(routes, withPreloading(PreloadAllModules), withComponentInputBinding()),
-  ],
+addIcons({
+  addCircleOutline, alertCircleOutline, archiveOutline, arrowBackOutline, arrowForwardOutline, barChartOutline, businessOutline,
+  checkmarkCircleOutline, clipboardOutline, documentTextOutline, imageOutline, layersOutline, locationOutline,
+  logOutOutline, personAddOutline, personOutline, refreshOutline, timeOutline,
 });
+
+const arranque = bootstrapApplication(AppComponent, appConfig);
+if (Capacitor.isNativePlatform()) {
+  void arranque.then(
+    () => requestAnimationFrame(() => { void SplashScreen.hide().catch(console.error); }),
+    () => { void SplashScreen.hide().catch(console.error); },
+  );
+}
+void arranque.catch(console.error);
