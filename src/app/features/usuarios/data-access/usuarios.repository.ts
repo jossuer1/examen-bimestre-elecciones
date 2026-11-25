@@ -1,8 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 
-import type { NuevoUsuario } from '../models/vistas.model';
-
-import { SupabaseClientService } from './supabase-client.service';
+import { SupabaseClientService } from '../../../core/services/supabase-client.service';
+import type { NuevoUsuario } from '../../../shared/models/vistas.model';
 
 @Injectable({ providedIn: 'root' })
 export class UsuariosRepository {

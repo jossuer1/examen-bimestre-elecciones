@@ -1,23 +1,21 @@
 import { Component, inject, input, output, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonButton, IonInput, IonNote, IonSpinner, IonText } from '@ionic/angular';
+import { IonButton, IonInput, IonNote, IonSpinner } from '@ionic/angular';
 
-import { mensajeError } from '../services/errores';
+import { mensajeError } from '../../../core/errors/errores';
+import { cedulaValidator } from '../../../shared/validators/cedula.validator';
 import { UsuariosService } from '../services/usuarios.service';
-import { cedulaValidator } from '../validators/cedula.validator';
 
 type Campo = 'cedula' | 'nombres' | 'apellidos' | 'telefono' | 'correo';
 
 @Component({
   selector: 'app-formulario-usuario',
   standalone: true,
-  imports: [ReactiveFormsModule, IonInput, IonButton, IonNote, IonSpinner, IonText],
+  imports: [ReactiveFormsModule, IonInput, IonButton, IonNote, IonSpinner],
   template: `
-    <form [formGroup]="form" (ngSubmit)="guardar()">
+    <form class="ce-form" [formGroup]="form" (ngSubmit)="guardar()">
       @if (error()) {
-        <ion-text color="danger"
-          ><p>{{ error() }}</p></ion-text
-        >
+        <p class="ce-alert" role="alert">{{ error() }}</p>
       }
 
       <ion-input

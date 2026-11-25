@@ -1,8 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 
-import type { RecintoResumen } from '../models/vistas.model';
-
-import { SupabaseClientService } from './supabase-client.service';
+import { SupabaseClientService } from '../../../core/services/supabase-client.service';
+import type { NuevoRecinto, RecintoResumen } from '../../../shared/models/vistas.model';
 
 interface FilaRecinto {
   id: number;
@@ -15,6 +14,11 @@ interface FilaRecinto {
 @Injectable({ providedIn: 'root' })
 export class RecintosRepository {
   private readonly sb = inject(SupabaseClientService).client;
+
+  async crear(datos: NuevoRecinto): Promise<void> {
+    const { error } = await this.sb.from('recintos').insert(datos);
+    if (error) throw error;
+  }
 
   async listarResumen(): Promise<RecintoResumen[]> {
     // "perfiles!coordinador_id" indica por cuál columna unir (hay dos relaciones)

@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 
+import type { NuevoUsuario } from '../../../shared/models/vistas.model';
+import { esCedulaValida } from '../../../shared/validators/cedula.validator';
 import { UsuariosRepository } from '../data-access/usuarios.repository';
-import type { NuevoUsuario } from '../models/vistas.model';
-import { esCedulaValida } from '../validators/cedula.validator';
 
 @Injectable({ providedIn: 'root' })
 export class UsuariosService {
