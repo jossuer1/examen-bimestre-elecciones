@@ -174,7 +174,11 @@ Deno.serve(async (req) => {
 
   // 8. Correo de confirmación de cuenta (R2)
   const anon = createClient(url, anonKey);
-  const { error: errCorreo } = await anon.auth.resend({ type: 'signup', email: correo });
+  const { error: errCorreo } = await anon.auth.resend({
+    type: 'signup',
+    email: correo,
+    options: { emailRedirectTo: 'controlelectoral://confirmar' },
+  });
 
   return responder(200, { id: nuevoId, correo_enviado: !errCorreo });
 });
